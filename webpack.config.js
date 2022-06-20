@@ -3,10 +3,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 module.exports = {
+    mode: 'development',
     entry: './srs/index.tsx',
     output: {
-        path: path.resolve(__dirname, "dist"),
         filename: production ? '[name].[contenthash].js' : '[name].js',
+        path: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [
@@ -52,5 +53,4 @@ module.exports = {
             filename: production ? '[name].[contenthash].css' : '[name].css',
         }),
     ],
-    mode: production ? 'production' : 'development' 
 }

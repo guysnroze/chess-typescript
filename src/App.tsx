@@ -13,7 +13,7 @@ const App = () => {
     const [whitePlayer, setWhitePlayer] = useState(new Player(Colors.WHITE))
     const [blackPlayer, setBlackPlayer] = useState(new Player(Colors.BLACK))
     const [currentPlayer, setCurrentPLayer] = useState<Player | null>(null)
-
+    const [modalActive, setModalActive] = useState(false)
     useEffect(() => {
         restart()
         setCurrentPLayer(whitePlayer)
